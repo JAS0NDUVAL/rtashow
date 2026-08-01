@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RTA SHOW | گالری و مدیریت</title>
+  <title>RTA SHOW</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -421,15 +421,15 @@
       font-size: 0.95rem;
     }
 
-    /* ===== GALLERY (بخش جدید) ===== */
+    /* ===== GALLERY ===== */
     .section-gallery {
       background: linear-gradient(135deg, #1e1a4a 0%, #0f2e3d 100%);
     }
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
       margin-top: 2rem;
     }
 
@@ -440,7 +440,7 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
       border: 1px solid rgba(168, 85, 247, 0.15);
       transition: 0.3s ease;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 16 / 9;
       background: #0f0f2a;
     }
 
@@ -461,7 +461,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
       padding: 20px 14px 14px;
       opacity: 0;
       transition: 0.3s;
@@ -472,82 +472,11 @@
     }
 
     .gallery-item .overlay span {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: #ddd;
       display: block;
       text-align: center;
-    }
-
-    .admin-controls {
-      background: rgba(168, 85, 247, 0.08);
-      border: 1px dashed rgba(168, 85, 247, 0.3);
-      border-radius: 16px;
-      padding: 30px;
-      margin-top: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .admin-controls input[type="file"] {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(168, 85, 247, 0.2);
-      border-radius: 8px;
-      padding: 12px 18px;
-      color: white;
-      font-family: 'Vazirmatn', sans-serif;
-      width: 240px;
-    }
-
-    .admin-controls input[type="text"] {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(168, 85, 247, 0.2);
-      border-radius: 8px;
-      padding: 12px 18px;
-      color: white;
-      font-family: 'Vazirmatn', sans-serif;
-      width: 200px;
-    }
-
-    .admin-controls input::placeholder {
-      color: rgba(255, 255, 255, 0.3);
-    }
-
-    .admin-controls .btn-sm {
-      padding: 12px 28px;
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      background: linear-gradient(135deg, #a855f7, #14b8a6);
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-      font-family: 'Vazirmatn', sans-serif;
-    }
-
-    .admin-controls .btn-sm:hover {
-      transform: scale(1.04);
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
-    }
-
-    .admin-controls .btn-danger {
-      background: #dc2626;
-      box-shadow: none;
-    }
-    .admin-controls .btn-danger:hover {
-      background: #b91c1c;
-    }
-
-    .gallery-empty {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 60px 20px;
-      color: #888;
-      font-size: 1.2rem;
-      border: 2px dashed rgba(168, 85, 247, 0.1);
-      border-radius: 20px;
+      font-weight: 500;
     }
 
     /* ===== CONTACT ===== */
@@ -662,15 +591,6 @@
       .reveal-section {
         padding: 50px 20px;
       }
-
-      .admin-controls {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .admin-controls input[type="file"],
-      .admin-controls input[type="text"] {
-        width: 100%;
-      }
       .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       }
@@ -695,52 +615,11 @@
       font-size: 1.2rem;
       padding: 6px 0;
     }
-
-    /* language toggle */
-    .lang-toggle {
-      display: flex;
-      gap: 6px;
-      align-items: center;
-      background: rgba(168, 85, 247, 0.08);
-      padding: 4px 10px;
-      border-radius: 30px;
-      border: 1px solid rgba(168, 85, 247, 0.15);
-      margin-right: 10px;
-    }
-
-    .lang-toggle button {
-      background: transparent;
-      border: none;
-      color: #b0b0c0;
-      font-weight: 500;
-      padding: 4px 8px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: 0.2s;
-      font-size: 0.8rem;
-      font-family: 'Vazirmatn', sans-serif;
-    }
-
-    .lang-toggle button.active-lang {
-      background: linear-gradient(135deg, #a855f7, #14b8a6);
-      color: white;
-    }
-
-    .lang-toggle button:hover {
-      color: white;
-    }
-
-    .rtl {
-      direction: rtl;
-    }
-    .ltr {
-      direction: ltr;
-    }
   </style>
 </head>
 
 <body>
-  <div class="portfolio-container" id="app">
+  <div class="portfolio-container">
 
     <!-- ===== NAV ===== -->
     <nav>
@@ -765,26 +644,17 @@
         <div class="logo-text">RTA SHOW</div>
       </div>
 
-      <div style="display:flex; align-items:center; gap:10px;">
+      <ul class="nav-menu" id="navMenu">
+        <li><a class="nav-link active" data-section="home" onclick="scrollToSection('home')">خانه</a></li>
+        <li><a class="nav-link" data-section="about" onclick="scrollToSection('about')">درباره</a></li>
+        <li><a class="nav-link" data-section="skills" onclick="scrollToSection('skills')">تخصص‌ها</a></li>
+        <li><a class="nav-link" data-section="gallery" onclick="scrollToSection('gallery')">گالری</a></li>
+        <li><a class="nav-link" data-section="contact" onclick="scrollToSection('contact')">تماس</a></li>
+      </ul>
 
-        <!-- زبان -->
-        <div class="lang-toggle">
-          <button class="active-lang" data-lang="fa" onclick="setLang('fa')">فا</button>
-          <button data-lang="en" onclick="setLang('en')">EN</button>
-        </div>
-
-        <ul class="nav-menu" id="navMenu">
-          <li><a class="nav-link active" data-section="home" onclick="scrollToSection('home')">خانه</a></li>
-          <li><a class="nav-link" data-section="about" onclick="scrollToSection('about')">درباره</a></li>
-          <li><a class="nav-link" data-section="skills" onclick="scrollToSection('skills')">تخصص‌ها</a></li>
-          <li><a class="nav-link" data-section="gallery" onclick="scrollToSection('gallery')">گالری</a></li>
-          <li><a class="nav-link" data-section="contact" onclick="scrollToSection('contact')">تماس</a></li>
-        </ul>
-
-        <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <!-- ===== HERO ===== -->
@@ -822,32 +692,38 @@
       <div class="section-content">
         <h2 class="section-title">تخصص‌ها</h2>
         <div class="skills-grid">
-          <div class="skill-card"><div class="skill-icon">💻</div><h3>کد نویسی</h3><p>تسلط کامل بر React، JavaScript، Python و فریمورک‌های مدرن.</p></div>
-          <div class="skill-card"><div class="skill-icon">🌐</div><h3>وب‌گردی</h3><p>طراحی سایت‌های زیبا و Responsive. تجربهٔ کاربری فوق‌العاده.</p></div>
-          <div class="skill-card"><div class="skill-icon">📹</div><h3>تولید محتوا</h3><p>خلق محتوای جذاب برای شبکه‌های اجتماعی. تحریر، ویدیو‌گرافی و استراتژی.</p></div>
-          <div class="skill-card"><div class="skill-icon">🎮</div><h3>گیمینگ</h3><p>تجزیه‌وتحلیل بازی‌ها، Speedrun و استریم‌زدن. تجربهٔ عمیق در عالم گیمینگ.</p></div>
+          <div class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3>کد نویسی</h3>
+            <p>تسلط کامل بر React، JavaScript، Python و فریمورک‌های مدرن. ساخت اپلیکیشن‌های پویا و کاربردی.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <h3>وب‌گردی</h3>
+            <p>طراحی سایت‌های زیبا و Responsive. تجربهٔ کاربری فوق‌العاده و Performance بهتر.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">📹</div>
+            <h3>تولید محتوا</h3>
+            <p>خلق محتوای جذاب برای شبکه‌های اجتماعی. تحریر، ویدیو‌گرافی و استراتژی محتوا.</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🎮</div>
+            <h3>گیمینگ</h3>
+            <p>تجزیه‌وتحلیل بازی‌ها، Speedrun و استریم‌زدن. تجربهٔ عمیق در عالم گیمینگ.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== GALLERY (بخش جدید با مدیریت ادمین) ===== -->
+    <!-- ===== GALLERY ===== -->
     <section id="gallery" class="reveal-section section-gallery">
       <div class="section-content">
         <h2 class="section-title">📸 گالری</h2>
 
         <div class="gallery-grid" id="galleryGrid">
-          <!-- تصاویر توسط جاوااسکریپت رندر می‌شوند -->
-          <div class="gallery-empty">هیچ عکسی موجود نیست. اولین عکس را اضافه کنید!</div>
+          <!-- عکس‌ها توسط جاوااسکریپت رندر می‌شوند -->
         </div>
-
-        <!-- پنل مدیریت ادمین -->
-        <div class="admin-controls">
-          <input type="file" id="imageUpload" accept="image/*" />
-          <input type="text" id="imageCaption" placeholder="توضیح (اختیاری)" />
-          <button class="btn-sm" onclick="addImage()">➕ افزودن عکس</button>
-          <button class="btn-sm btn-danger" onclick="clearAllGallery()">🗑️ پاک کردن همه</button>
-        </div>
-        <p style="text-align:center; color:#888; font-size:0.8rem; margin-top:8px;">فقط ادمین می‌تواند عکس اضافه یا حذف کند (داده‌ها در مرورگر ذخیره می‌شوند)</p>
       </div>
     </section>
 
@@ -860,13 +736,23 @@
 
           <div class="social-links">
             <a href="https://instagram.com/rta.show" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
             </a>
             <a href="https://t.me/rtashow" target="_blank" rel="noopener noreferrer" class="social-btn" title="Telegram">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M21.5 2.5L2.5 10.5l6 2.5 2.5 7 3-4 4.5 3.5 3-16.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 13l10-8-8 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                <path d="M21.5 2.5L2.5 10.5l6 2.5 2.5 7 3-4 4.5 3.5 3-16.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M8.5 13l10-8-8 9.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
             </a>
             <a href="mailto:rtashow@gmail.com" class="social-btn" title="Email">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
             </a>
           </div>
 
@@ -886,91 +772,38 @@
   </div>
 
   <script>
-    // ===== زبان (فارسی پیش‌فرض) =====
-    let currentLang = 'fa';
-
-    function setLang(lang) {
-      currentLang = lang;
-      document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active-lang'));
-      document.querySelector(`.lang-toggle button[data-lang="${lang}"]`).classList.add('active-lang');
-
-      if (lang === 'en') {
-        document.documentElement.lang = 'en';
-        document.documentElement.dir = 'ltr';
-        document.querySelector('.hero h1').textContent = 'RTA SHOW';
-        document.querySelector('.hero p').textContent = 'Creative content production including coding, web surfing, gaming and much more';
-        document.querySelector('.about-text h3').textContent = 'Hi, I\'m RTA';
-        document.querySelector('.about-text p:first-of-type').textContent = 'A passionate content creator and programmer seeking to create interesting and meaningful content. Combining my interest in coding, web surfing, content production and gaming, I try to create a learning and fun experience for my audience.';
-        document.querySelector('.about-text p:last-of-type').textContent = 'My goal is to build a creative and thoughtful community that goes through a period of mutual growth and development.';
-        document.querySelector('#skills .section-title').textContent = '⚡ Skills';
-        document.querySelector('#gallery .section-title').textContent = '📸 Gallery';
-        document.querySelector('#contact .section-title').textContent = '📬 Contact';
-        document.querySelector('.contact-content p').textContent = 'I\'d love to hear from you. Reach me through the ways below.';
-        document.querySelector('.email-box input[placeholder="نام شما"]').placeholder = 'Your name';
-        document.querySelector('.email-box input[placeholder="ایمیل شما"]').placeholder = 'Your email';
-        document.querySelector('.email-box textarea').placeholder = 'Write your message...';
-        document.querySelector('.email-box button').textContent = 'Send message';
-        document.querySelector('footer p').innerHTML = '© 2024 RTA SHOW. All rights reserved. | Made with ❤️';
-        document.querySelector('.admin-controls input[placeholder="توضیح (اختیاری)"]').placeholder = 'Caption (optional)';
-        document.querySelector('.admin-controls .btn-sm:first-of-type').textContent = '➕ Add photo';
-        document.querySelector('.admin-controls .btn-sm:last-of-type').textContent = '🗑️ Clear all';
-        document.querySelector('.gallery-empty') && (document.querySelector('.gallery-empty').textContent = 'No images yet. Add the first one!');
-        // به‌روزرسانی منو
-        document.querySelectorAll('.nav-link').forEach(link => {
-          const map = { 'home': 'Home', 'about': 'About', 'skills': 'Skills', 'gallery': 'Gallery',
-            'contact': 'Contact' };
-          if (map[link.dataset.section]) link.textContent = map[link.dataset.section];
-        });
-      } else {
-        document.documentElement.lang = 'fa';
-        document.documentElement.dir = 'rtl';
-        location.reload(); // برای سادگی، صفحه رو ری‌لود می‌کنیم تا همه متن‌ها برگردن به فارسی
+    // ===== گالری (ثابت با عکس پیش‌فرض) =====
+    const galleryImages = [
+      {
+        src: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=450&fit=crop',
+        caption: '🎮 گیمینگ حرفه‌ای'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&h=450&fit=crop',
+        caption: '🎯 استریم و گیم‌پلی'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=800&h=450&fit=crop',
+        caption: '🖥️ تنظیمات گیمینگ'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=800&h=450&fit=crop',
+        caption: '⚡ تجربه گیمینگ حرفه‌ای'
       }
-    }
-
-    // ===== گالری (مدیریت توسط ادمین) =====
-    let gallery = JSON.parse(localStorage.getItem('rtaGallery')) || [];
+    ];
 
     function renderGallery() {
       const grid = document.getElementById('galleryGrid');
       if (!grid) return;
-      if (gallery.length === 0) {
-        grid.innerHTML = `<div class="gallery-empty">هیچ عکسی موجود نیست. اولین عکس را اضافه کنید!</div>`;
-        return;
-      }
-      grid.innerHTML = gallery.map((item, index) => `
+
+      grid.innerHTML = galleryImages.map((item) => `
             <div class="gallery-item">
-              <img src="${item.src}" alt="${item.caption || 'گالری RTA'}" />
-              <div class="overlay"><span>${item.caption || ''}</span></div>
+              <img src="${item.src}" alt="${item.caption}" loading="lazy" />
+              <div class="overlay">
+                <span>${item.caption}</span>
+              </div>
             </div>
           `).join('');
-    }
-
-    function addImage() {
-      const fileInput = document.getElementById('imageUpload');
-      const captionInput = document.getElementById('imageCaption');
-      const file = fileInput.files[0];
-      if (!file) {
-        alert('لطفاً یک عکس انتخاب کنید.');
-        return;
-      }
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        gallery.push({ src: e.target.result, caption: captionInput.value.trim() || 'بدون توضیح' });
-        localStorage.setItem('rtaGallery', JSON.stringify(gallery));
-        renderGallery();
-        fileInput.value = '';
-        captionInput.value = '';
-      };
-      reader.readAsDataURL(file);
-    }
-
-    function clearAllGallery() {
-      if (confirm('همه عکس‌ها حذف شوند؟')) {
-        gallery = [];
-        localStorage.setItem('rtaGallery', JSON.stringify(gallery));
-        renderGallery();
-      }
     }
 
     // ===== اسکرول و منو =====
@@ -1006,8 +839,6 @@
     window.addEventListener('load', function() {
       handleScroll();
       renderGallery();
-      // زبان پیش‌فرض فارسی
-      document.querySelector('.lang-toggle button[data-lang="fa"]').classList.add('active-lang');
     });
 
     // هماهنگی لینک‌های منو با اسکرول
